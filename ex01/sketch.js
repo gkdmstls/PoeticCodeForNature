@@ -1,90 +1,51 @@
-let wordBall;
-let writeForce;
-let poetry;
+var img;
+let particles = [];
 
-function setup() {
-  title = createElement('h2', "<a href='/PoeticCodeForNature'> >></a> 쿵쿵짝쿵");
-  title.position(10, 10);
-
-  canvas = createCanvas(300, 100);
-  canvas.position(0, 100);
-  canvas.class("artwork");
-
-  poetry = "";
-  text = createDiv(poetry);
-  text.position(300, 110);
-  text.style("font-family", "monospace");
-  text.style("font-size", "50pt");
-
-  wordBall = new Mover();
-  writeForce = createVector(2, 0);
-
-  userStartAudio();
+function preload()
+{
+  img = loadImage('www.jpg');
 }
 
-function draw() {
-  background(0);
-
-  wordBall.applyForce(writeForce);
-  wordBall.update();
-  if (wordBall.hitEdge()) {
-    writePoetry();
-  }
-  wordBall.show();
-
+function setup()
+{
+  createCanvas(600, 400);
+  frameRate(20);
 }
 
+function draw()
+{
+    background(255);
+    image(img, 0, 0);
 
-function writePoetry() {
-  randomWord = random(['쿵', '짝']);
-  poetry = randomWord + poetry;
-  text.html(poetry);
-  if (randomWord == '쿵') wordBall.kung();
-  else wordBall.zzak();
+  let p = new Particle();
+  particles.push(p);
+  for(let i = 0; i < particles.length; i++)
+  {
+    particles[i].update();
+    particles[i].show();
+  }
+  ellipse(mouseX, mouseY, 10, 10);
 }
 
-
-class Mover {
-  constructor() {
-    this.pos = createVector(50, height/2);
-    this.vel = createVector(0, 0);
-    this.acc = createVector(0, 0);
-    this.r = 25;
-    this.synth = new p5.MonoSynth();
+class Particle
+{
+  constructor()
+  {
+    this.x = mouseX;
+    this.y = mouseY;
+    this.vx = random (1, -1);
+    this.vy = random (3, -1);
   }
+  show()
+  {
+    noStroke();
+    fill(255, 205, 100, 130);
+    ellipse(this.x, this.y, 10);
 
-  applyForce(aForce) {
-    this.acc.add(aForce);
   }
-
-  update() {
-    this.vel.add(this.acc);
-    this.pos.add(this.vel);
-    this.acc.set(0);
-  }
-
-  hitEdge() {
-    if (this.pos.x+this.r > width) {
-      this.vel.x = this.vel.x * -1;
-      this.pos.x = width-this.r;
-      return true;
-    }
-    return false;
-  }
-
-  kung() {
-    this.synth.triggerAttack("C3");
-    this.synth.triggerRelease(0.1);
-  }
-
-  zzak() {
-    this.synth.triggerAttack("F3");
-    this.synth.triggerRelease(0.1);
-  }
-
-
-  show() {
-    fill(255);
-    ellipse(this.pos.x, this.pos.y, this.r*2);
+  update()
+  {
+    this.x += this.vx;
+    this.y += this.vy;
   }
 }
