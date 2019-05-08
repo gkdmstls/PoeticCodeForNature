@@ -1,11 +1,6 @@
 ## 시작하기
 
 접속 주소 : <http://gkdmstls.github.io/PoeticCodeForNature/>
- * picxenk 대신 여러분의 아이디로 변경합니다.
- * \_config.yml 파일에서 url 값을 여러분에게 맞게 수정하세요.
- * 원한다면 테마를 변경할 수 있습니다. <https://pages.github.com/themes/> 페이지를 참고합니다.
- * 여러분의 작업에 어울리는 테마 작업이 된다면 더 멋지겠죠?
- * 접속 주소는 상단에 노출하고, '시작하기'부분은 삭제해도 됩니다.
 
 ## 신하은
  * 디지털아트 1623035
