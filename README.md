@@ -1,4 +1,4 @@
-## 시작하기
+## START
 
 접속 주소 : <http://gkdmstls.github.io/S.HE/>
 
@@ -26,7 +26,7 @@
 ### [Snow](./snow/)
  ![눈 내리기](./sno.png)
   * 눈이 내리는 모습을 표현
-----
 
+----
 ### [Box 예제](./Boxes/)
   * 기본예제
