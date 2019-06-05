@@ -13,6 +13,11 @@
 
 ## 작업
 ----
+### [grotesque](./grotesque/)
+ ![grotesque](./gro.png)
+  * 기괴한 표정
+
+----
 ### [firefly](./ex01/)
  ![반딧불이](./fly.png)
   * 마우스를 움직이면 반딧불이가 생겨난다.
