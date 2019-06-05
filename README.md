@@ -1,6 +1,6 @@
 ## 시작하기
 
-접속 주소 : <http://gkdmstls.github.io/PoeticCodeForNature/>
+접속 주소 : <http://gkdmstls.github.io/S.HE/>
 
 ## 신하은
  * 여행
