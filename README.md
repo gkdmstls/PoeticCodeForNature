@@ -2,7 +2,7 @@
 
 접속 주소 : <http://gkdmstls.github.io/S.HE/>
 
-## 신하은
+## S.Haeun
  * 여행
  * 가고
  * 싶다.
@@ -18,7 +18,7 @@
   * 마우스를 움직이면 반딧불이가 생겨난다.
 
 ----
-### [운석충돌](./fireworks/)
+### [Meteorite collision](./fireworks/)
  ![운석충돌](./firework.png)
   * 운석이 출동하여 분리되어 떨어지는 것을 표현
 
